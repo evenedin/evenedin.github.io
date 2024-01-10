@@ -1,37 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Your Homepage</title>
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Button 1</a></li>
-                <li><a href="#">Button 2</a></li>
-                <li><a href="#">Button 3</a></li>
-                <li><a href="#">Button 4</a></li>
-                <li><a href="#">Button 5</a></li>
-            </ul>
-        </nav>
-    </header>
+    <title>Even Edin</title>
 
-    <div class="container-row">
-        <div class="container">Container 1</div>
-        <div class="container">Container 2</div>
-        <div class="container">Container 3</div>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <button href="#" onclick="showSection('section1')">Section 1</button>
+        <button href="#" onclick="showSection('section2')">Section 2</button>
+        <button href="#" onclick="showSection('section3')">Section 3</button>
+        <!-- Add more links as needed -->
+</nav>
+    <div class="button-container">
+        <button onclick="showSection('section1')">Button 1</button>
+        <button onclick="showSection('section2')">Button 2</button>
+        <button onclick="showSection('section3')">Button 3</button>
+        <button onclick="showSection('section4')">Button 4</button>
+        <button onclick="showSection('section5')">Button 5</button>
+        <button onclick="showSection('section6')">Button 6</button>
+        <button onclick="showSection('section7')">Button 7</button>
+        <button onclick="showSection('section8')">Button 8</button>
     </div>
-    <div class="container-row">
-        <div class="container">Container 4</div>
-        <div class="container">Container 5</div>
-        <div class="container">Container 6</div>
-    </div>
+
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>This is the content of section 1.</p>
+    </section>
+
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>This is the content of section 2.</p>
+    </section>
+
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>This is the content of section 3.</p>
+    </section>
+
+    <section id="section4">
+        <h2>Section 4</h2>
+        <p>This is the content of section 4.</p>
+    </section>
+
+    <section id="section5">
+        <h2>Section 5</h2>
+        <p>This is the content of section 5.</p>
+    </section>
+
+    <section id="section6">
+        <h2>Section 6</h2>
+        <p>This is the content of section 6.</p>
+    </section>
+
+    <section id="section7">
+        <h2>Section 7</h2>
+        <p>This is the content of section 7.</p>
+    </section>
+
+    <section id="section8">
+        <h2>Section 8</h2>
+        <p>This is the content of section 8.</p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 Your Company</p>
-    </footer>
+    <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+</footer>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.getElementsByTagName('section');
+
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+
 </body>
+
 </html>
